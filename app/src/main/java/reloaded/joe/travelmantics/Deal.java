@@ -32,6 +32,7 @@ public class Deal extends AppCompatActivity {
     private static final int PICTURE_RESULT=42;
     ImageView imageview;
     TravelDeal deal;
+   // RecyclerView rvDeals;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +43,6 @@ public class Deal extends AppCompatActivity {
         ettitle = findViewById(R.id.ettitle);
         etprice = findViewById(R.id.etprice);
         etdescription = findViewById(R.id.etdescription);
-        //FirebaseUtil.openFbReference("traveldeals",this);
         showImage(deal.getImageUrl());
         imageview=findViewById(R.id.image);
         Button btnimage=findViewById(R.id.btnimage);

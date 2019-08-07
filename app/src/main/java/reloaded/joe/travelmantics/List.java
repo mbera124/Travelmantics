@@ -1,37 +1,39 @@
 package reloaded.joe.travelmantics;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.ArrayList;
 
 public class List extends AppCompatActivity {
-   // ArrayList<TravelDeal> deals;
-   // private FirebaseDatabase mFirebaseDatabase;
-   // private DatabaseReference mDatabaseReference;
-  //  private ChildEventListener mChildListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+        findViewById(R.id.rvdeals).setOnClickListener(new View.OnClickListener() {
 
+            @Override
+
+            public void onClick(View v) {
+
+                startActivity(new Intent(List.this, Deal.class));
+
+            }
+
+        });
     }
 
     @Override
